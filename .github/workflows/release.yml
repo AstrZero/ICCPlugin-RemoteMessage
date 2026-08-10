@@ -1,0 +1,26 @@
+name: Release
+
+on:
+  push:
+    tags: [ 'v*' ]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Release tag (e.g. v1.0.0)'
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    uses: InkCanvasForClass/community/.github/workflows/plugin-build.yml@net6
+    with:
+      project: RemoteMessagePlugin.csproj
+      plugin_id: remotemessage.plugin
+      plugin_name: RemoteMessage
+      plugin_description: '远程消息，使用ICCCE的灵动通知API'
+      create_release: true
+      release_tag: ${{ inputs.tag || github.ref_name }}
+    secrets: inherit
