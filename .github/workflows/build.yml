@@ -17,7 +17,7 @@ jobs:
     uses: InkCanvasForClass/community/.github/workflows/plugin-build.yml@net6
     with:
       project: RemoteMessagePlugin.csproj
-      plugin_id: remotemessage.plugin
+      plugin_id: org.inkcanvas.remotemessage
       plugin_name: RemoteMessage
       plugin_description: '远程消息，使用ICCCE的灵动通知API'
       create_release: true

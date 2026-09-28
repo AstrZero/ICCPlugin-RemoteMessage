@@ -1,0 +1,15 @@
+{
+  "Id": "org.inkcanvas.remotemessage",
+  "Name": "RemoteMessage",
+  "Version": "1.0.0",
+  "Description": "开放23000端口用于发送远程消息，webui: http://ip:23000",
+  "Author": "AstrZero",
+  "EntranceAssembly": "RemoteMessagePlugin.dll",
+  "ApiVersion": "1.10.0",
+  "MinHostVersion": "1.7.19",
+  "Icon": "icon.png",
+  "Permissions": [
+    "Network",
+    "Notification"
+  ]
+}
